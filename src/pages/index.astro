@@ -1,0 +1,42 @@
+---
+// Supports weights 100-900
+import "@fontsource-variable/onest";
+import Navbar from "../layouts/Navbar.astro";
+import "../css/index.css";
+---
+
+<Navbar />
+<div
+  class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+>
+</div>
+<main>
+  <div class="w-1/2 m-auto flex flex-col gap-2">
+    <h1 class="font-semibold text-5xl lg:text-7xl">
+      Hola, soy <span class="text-blue-500">Julio</span>.
+    </h1>
+    <div class="profesion font-semibold md:text-3xl lg:text-4xl">
+      <h2 class="txt-estatico">Y soy</h2>
+      <ul class="txt-dinamico">
+        <li><span>Ing en computaci&oacute;n.</span></li>
+        <li><span>Programador.</span></li>
+        <li><span>Editor.</span></li>
+      </ul>
+    </div>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci atque,
+      ducimus sit qui dolor ex blanditiis. Inventore delectus nostrum minus
+      distinctio nihil dolorem numquam voluptate maxime, debitis, molestiae quas
+      asperiores?
+    </p>
+  </div>
+</main>
+
+<style is:global>
+  html {
+    font-family: "Onest Variable", sans-serif;
+  }
+  body {
+    color: white;
+  }
+</style>

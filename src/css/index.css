@@ -1,0 +1,51 @@
+.profesion {
+    display: flex;
+}
+
+.profesion .txt-dinamico {
+    margin-left: 10px;
+    height: 45px;
+    line-height: 45px;
+    overflow: hidden;
+}
+
+.txt-dinamico li {
+    color: red;
+    position: relative;
+    top: 0;
+    /* 3s por cada li */
+    animation: slide 9s steps(3) infinite;
+}
+
+@keyframes slide {
+    100%{
+        /* Modificar para ajustar */
+        top: -136px;
+    }
+}
+
+.txt-dinamico li span {
+    position: relative;
+    margin: 5px 0;
+    line-height: 45px;
+}
+
+.txt-dinamico li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #181822;
+    border-left: 2px solid red;
+    animation: typing 3s steps(10) infinite;
+}
+
+@keyframes typing {
+    40%, 60%{
+        left: calc(100% + 30px);
+    }
+    100%{
+        left: 0;
+    }
+}
