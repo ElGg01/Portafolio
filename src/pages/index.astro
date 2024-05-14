@@ -3,34 +3,56 @@
 import "@fontsource-variable/onest";
 import Navbar from "../layouts/Navbar.astro";
 import "../css/index.css";
+import Base from "../layouts/BaseLayout.astro";
 ---
 
-<Navbar />
-<div
-  class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
->
-</div>
-<main>
-  <div class="w-1/2 m-auto flex flex-col gap-2">
-    <h1 class="font-semibold text-5xl lg:text-7xl">
-      Hola, soy <span class="text-blue-500">Julio</span>.
-    </h1>
-    <div class="profesion font-semibold md:text-3xl lg:text-4xl">
-      <h2 class="txt-estatico">Y soy</h2>
-      <ul class="txt-dinamico">
-        <li><span>Ing en computaci&oacute;n.</span></li>
-        <li><span>Programador.</span></li>
-        <li><span>Editor.</span></li>
-      </ul>
-    </div>
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci atque,
-      ducimus sit qui dolor ex blanditiis. Inventore delectus nostrum minus
-      distinctio nihil dolorem numquam voluptate maxime, debitis, molestiae quas
-      asperiores?
-    </p>
+<Base titulo="Mi portafolio">
+  <div
+    class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+  >
   </div>
-</main>
+  <div class="container">
+    <h1 class="text-7xl font-medium">
+      Hola, mi nombre es <span class="font-extrabold">Julio</span>, y soy:
+    </h1>
+    <div class="text-wrapper">
+      <p>Ingeniero.</p>
+      <p>Editor.</p>
+      <p>Programador.</p>
+    </div>
+    <img
+      src="NewLogo.png"
+      alt=""
+      class="rounded-full my-40 mx-auto"
+      width="250px"
+    />
+  </div>
+  <!-- <Navbar /> -->
+  <!-- <div
+    class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+  >
+  </div>
+  <main>
+    <div class="w-1/2 m-auto flex flex-col gap-4">
+      <div class="flex items-center gap-4">
+        <h1 class="font-semibold text-5xl lg:text-7xl">
+          Hola, soy <span class="text-blue-500">Julio</span>.
+        </h1>
+        <div class="m-auto">
+          <button class="bg-neutral-950 p-2 rounded-full">Disponible</button>
+        </div>
+      </div>
+      <div class="profesion font-semibold md:text-3xl lg:text-4xl">
+        <h2 class="txt-estatico">Y soy&nbsp;</h2>
+        <div class="txt-dinamico text-red-600"></div>
+        <div class="barra-texto"></div>
+      </div>
+      <p>Me gusta automatizar procesos, el desarrollo web, y usar Python.</p>
+    </div>
+  </main>
+  <script src="../js/typewriter"></script> -->
+  <script src="../js/textAnimation.js"></script>
+</Base>
 
 <style is:global>
   html {

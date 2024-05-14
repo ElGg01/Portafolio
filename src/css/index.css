@@ -1,51 +1,53 @@
-.profesion {
+p {
+    font-size: 7rem;
+    text-align: center;
+    line-height: 0;
+    font-weight: 700;
+}
+
+p:nth-of-type(1){
+    color: whitesmoke;
+}
+
+p:nth-of-type(2){
+    color: yellow;
+}
+
+p:nth-of-type(3){
+    color: cyan;
+}
+
+.container {
+    margin: 100px auto;
+}
+
+.text-wrapper {
+    margin: 100px auto;
+}
+
+
+
+
+
+
+
+
+
+
+/* .profesion {
     display: flex;
 }
 
-.profesion .txt-dinamico {
-    margin-left: 10px;
-    height: 45px;
-    line-height: 45px;
-    overflow: hidden;
+.barra-texto {
+    width: 3px;
+    height: 35px;
+    margin-left: 5px;
+    background-color: white;
+    animation: parpadeo-texto 1s ease infinite;
 }
 
-.txt-dinamico li {
-    color: red;
-    position: relative;
-    top: 0;
-    /* 3s por cada li */
-    animation: slide 9s steps(3) infinite;
-}
-
-@keyframes slide {
-    100%{
-        /* Modificar para ajustar */
-        top: -136px;
+@keyframes parpadeo-texto {
+    50% {
+        scale: 0.8;
     }
-}
-
-.txt-dinamico li span {
-    position: relative;
-    margin: 5px 0;
-    line-height: 45px;
-}
-
-.txt-dinamico li span::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background: #181822;
-    border-left: 2px solid red;
-    animation: typing 3s steps(10) infinite;
-}
-
-@keyframes typing {
-    40%, 60%{
-        left: calc(100% + 30px);
-    }
-    100%{
-        left: 0;
-    }
-}
+} */
