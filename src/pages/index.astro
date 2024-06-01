@@ -4,53 +4,38 @@ import "@fontsource-variable/onest";
 import Navbar from "../layouts/Navbar.astro";
 import "../css/index.css";
 import Base from "../layouts/BaseLayout.astro";
+import "animate.css";
 ---
 
 <Base titulo="Mi portafolio">
   <div
-    class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+    class="fixed top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
   >
   </div>
   <div class="container">
-    <h1 class="text-7xl font-medium">
+    <h1
+      class="sm:text-xs lg:text-7xl font-medium animate__animated animate__fadeInDown"
+      id="presentation"
+    >
       Hola, mi nombre es <span class="font-extrabold">Julio</span>, y soy:
     </h1>
-    <div class="text-wrapper">
+    <div class="text-wrapper sm:text-9xl">
       <p>Ingeniero.</p>
       <p>Editor.</p>
       <p>Programador.</p>
     </div>
-    <img
-      src="NewLogo.png"
-      alt=""
-      class="rounded-full my-40 mx-auto"
-      width="250px"
-    />
-  </div>
-  <!-- <Navbar /> -->
-  <!-- <div
-    class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
-  >
-  </div>
-  <main>
-    <div class="w-1/2 m-auto flex flex-col gap-4">
-      <div class="flex items-center gap-4">
-        <h1 class="font-semibold text-5xl lg:text-7xl">
-          Hola, soy <span class="text-blue-500">Julio</span>.
-        </h1>
-        <div class="m-auto">
-          <button class="bg-neutral-950 p-2 rounded-full">Disponible</button>
-        </div>
-      </div>
-      <div class="profesion font-semibold md:text-3xl lg:text-4xl">
-        <h2 class="txt-estatico">Y soy&nbsp;</h2>
-        <div class="txt-dinamico text-red-600"></div>
-        <div class="barra-texto"></div>
-      </div>
-      <p>Me gusta automatizar procesos, el desarrollo web, y usar Python.</p>
+    <div class="animate__animated animate__zoomIn animate__delay-3s">
+      <img
+        src="NewLogo.png"
+        alt=""
+        class="rounded-full my-40 mx-auto"
+        width="250px"
+      />
     </div>
-  </main>
-  <script src="../js/typewriter"></script> -->
+    <div class="">
+      <h2 class="text-center">Mis proyectos:</h2>
+    </div>
+  </div>
   <script src="../js/textAnimation.js"></script>
 </Base>
 

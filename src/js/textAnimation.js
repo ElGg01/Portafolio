@@ -4,10 +4,6 @@ import SpliteTextJS from "split-text-js";
 const titles = gsap.utils.toArray('p');
 const tl = gsap.timeline({delay: 1});
 
-console.log('Escribiendo desde textanimation.js');
-
-
-
 titles.forEach((title, index, array) => {
     const splitTitle = new SpliteTextJS(title);
 
