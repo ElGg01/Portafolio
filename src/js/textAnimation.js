@@ -1,5 +1,5 @@
-import gsap from "gsap";
-import SpliteTextJS from "split-text-js";
+/* import gsap from "gsap";
+import SpliteTextJS from "split-text-js"; */
 
 const titles = gsap.utils.toArray('p');
 const tl = gsap.timeline({delay: 1});

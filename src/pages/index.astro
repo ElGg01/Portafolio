@@ -2,41 +2,105 @@
 // Supports weights 100-900
 import "@fontsource-variable/onest";
 import Navbar from "../layouts/Navbar.astro";
-import "../css/index.css";
 import Base from "../layouts/BaseLayout.astro";
 import "animate.css";
+import "../css/flaticons.css";
+import "../css/timeline.css";
 ---
 
 <Base titulo="Mi portafolio">
+  <Navbar />
+  <!-- FONDO -->
   <div
-    class="fixed top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+    class="fixed inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"
   >
   </div>
-  <div class="container">
-    <h1
-      class="sm:text-xs lg:text-7xl font-medium animate__animated animate__fadeInDown"
-      id="presentation"
-    >
-      Hola, mi nombre es <span class="font-extrabold">Julio</span>, y soy:
-    </h1>
-    <div class="text-wrapper sm:text-9xl">
-      <p>Ingeniero.</p>
-      <p>Editor.</p>
-      <p>Programador.</p>
-    </div>
-    <div class="animate__animated animate__zoomIn animate__delay-3s">
-      <img
-        src="NewLogo.png"
-        alt=""
-        class="rounded-full my-40 mx-auto"
-        width="250px"
-      />
-    </div>
-    <div class="">
-      <h2 class="text-center">Mis proyectos:</h2>
+  <!-- CONTENIDO -->
+  <div class="p-5 mt-36">
+    <div class="m-auto">
+      <h1
+        class="text-4xl text-center mb-6 animate__animated animate__fadeInDown"
+      >
+        Hola, mi nombre es <span class="font-bold">Julio</span>.
+      </h1>
+      <div class="text-center animate__animated animate__fadeInUp">
+        <span
+          class="relative inline-block overflow-hidden rounded-full p-[1px]"
+        >
+          <span
+            class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
+          ></span>
+          <div
+            class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gray-950 px-3 py-1 text-xs font-medium text-gray-50 backdrop-blur-3xl"
+          >
+            Disponible para trabajar
+          </div>
+        </span>
+      </div>
+      <div class="animate__animated animate__jackInTheBox">
+        <img
+          src="NewLogo.png"
+          alt="My Logo"
+          class="rounded-full w-1/6 min-w-28 max-w-40 block mx-auto my-4"
+        />
+      </div>
+      <div
+        class="bg-white bg-opacity-10 backdrop-blur-md shadow-md rounded-lg mx-auto mt-4 p-4 w-full animate__animated animate__fadeInUp max-w-4xl"
+      >
+        <h2 class="font-bold">SOBRE MI:</h2>
+        <p class="text-gray-400">
+          Soy ingeniero en computación en busqueda de mi primer empleo.
+        </p>
+      </div>
+      <div class="mt-4 text-center">
+        <h2 class="animate__animated animate__fadeInUp">Mi experiencia:</h2>
+        <div class="timeline">
+          <div class="timeline-container right-container">
+            <img src="NewLogo.png" alt="" />
+            <div class="text-box">
+              <h2>Alphabet Inc.</h2>
+              <small>2017 - 2019</small>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero
+                necessitatibus dolorum asperiores distinctio ipsum, saepe
+                similique amet quae recusandae accusantium. Quo iusto at eveniet
+                autem voluptatum fugit provident quae dolore?
+              </p>
+              <span class="right-container-arrow"></span>
+            </div>
+          </div>
+          <div class="timeline-container left-container">
+            <img src="NewLogo.png" alt="" />
+            <div class="text-box">
+              <h2>Amazon Inc.</h2>
+              <small>2017 - 2019</small>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero
+                necessitatibus dolorum asperiores distinctio ipsum, saepe
+                similique amet quae recusandae accusantium. Quo iusto at eveniet
+                autem voluptatum fugit provident quae dolore?
+              </p>
+              <span class="left-container-arrow"></span>
+            </div>
+          </div>
+          <div class="timeline-container right-container">
+            <img src="NewLogo.png" alt="" />
+            <div class="text-box">
+              <h2>Tesla Inc.</h2>
+              <small>2017 - 2019</small>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero
+                necessitatibus dolorum asperiores distinctio ipsum, saepe
+                similique amet quae recusandae accusantium. Quo iusto at eveniet
+                autem voluptatum fugit provident quae dolore?
+              </p>
+              <span class="right-container-arrow"></span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <script src="../js/textAnimation.js"></script>
 </Base>
 
 <style is:global>
