@@ -6,6 +6,7 @@ import Base from "../layouts/BaseLayout.astro";
 import "animate.css";
 import "../css/flaticons.css";
 import "../css/timeline.css";
+import "../css/card.css";
 ---
 
 <Base titulo="Mi portafolio">
@@ -51,15 +52,29 @@ import "../css/timeline.css";
         <p class="text-gray-400">
           Soy ingeniero en computación en busqueda de mi primer empleo.
         </p>
+        <h2 class="font-bold mt-4">CORREO ELECTRONICO:</h2>
+        <p class="text-gray-400">jcng.aa135@gmail.com</p>
+        <h2 class="font-bold mt-4">TITULO:</h2>
+        <p class="text-gray-400">Ingeniero en computación - UNAM</p>
       </div>
-      <div class="mt-4 text-center">
-        <h2 class="animate__animated animate__fadeInUp">Mi experiencia:</h2>
+      <div class="my-4 text-center">
+        <h2 class="animate__animated animate__fadeInUp text-xl mt-12 font-bold">
+          Mi stack de tecnología:
+        </h2>
+        <div class="flex justify-center">
+          <div class="tagcloud"></div>
+        </div>
+      </div>
+      <div id="experience" class="my-4 text-center">
+        <h2 class="animate__animated animate__fadeInUp text-xl mt-12 font-bold">
+          Mi experiencia:
+        </h2>
         <div class="timeline">
           <div class="timeline-container right-container">
             <img src="NewLogo.png" alt="" />
             <div class="text-box">
-              <h2>Alphabet Inc.</h2>
-              <small>2017 - 2019</small>
+              <h2>CONAHCYT</h2>
+              <small>2023 - 2024</small>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero
                 necessitatibus dolorum asperiores distinctio ipsum, saepe
@@ -72,8 +87,8 @@ import "../css/timeline.css";
           <div class="timeline-container left-container">
             <img src="NewLogo.png" alt="" />
             <div class="text-box">
-              <h2>Amazon Inc.</h2>
-              <small>2017 - 2019</small>
+              <h2>UNIDAD DE PLANEACIÓN - UNAM</h2>
+              <small>2023 - 2023</small>
               <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero
                 necessitatibus dolorum asperiores distinctio ipsum, saepe
@@ -99,8 +114,57 @@ import "../css/timeline.css";
           </div>
         </div>
       </div>
+      <div id="projects" class="my-4 text-center">
+        <h2 class="animate__animated animate__fadeInUp text-xl mt-12 font-bold">
+          Mis proyectos:
+        </h2>
+        <div class="flex justify-center flex-wrap my-8 max-w-7xl m-auto">
+          <div class="card animate__animated animate__fadeIn animate__delay-2s">
+            <div class="relative">
+              <div
+                class="absolute top-1/2 right-0 left-0 text-red-600 font-bold text-card"
+              >
+                <p>IR AL PROYECTO</p>
+              </div>
+              <div class="card-img-container">
+                <img src="NewLogo.png" alt="" class="w-full" />
+              </div>
+            </div>
+            <div>
+              <h3 class="font-bold my-4">EconoMÍA</h3>
+              <p>App móvil para gestionar tus finanzas.</p>
+            </div>
+            <small
+              class="absolute right-0 left-0 bottom-0 bg-black/50 rounded-b-lg h-8 flex justify-items-center justify-center items-center text-lg"
+              ><img src="icons8-dart-48.png" alt="" class="w-6" />
+              <img src="icons8-firebase-48.png" alt="" class="w-6" />
+            </small>
+          </div>
+          <div class="card animate__animated animate__fadeIn animate__delay-2s">
+            <div class="relative">
+              <div
+                class="absolute top-1/2 right-0 left-0 text-red-600 font-bold text-card"
+              >
+                <p>IR AL PROYECTO</p>
+              </div>
+              <div class="card-img-container">
+                <img src="NewLogo.png" alt="" class="w-full" />
+              </div>
+            </div>
+            <div>
+              <h3 class="font-bold my-4">Felicitame</h3>
+              <p>Una web para que nunca más olvides un cumpleaños.</p>
+            </div>
+            <small
+              class="absolute right-0 left-0 bottom-0 bg-black/50 rounded-b-lg h-8 flex justify-items-center justify-center items-center text-lg"
+              ><img src="icons8-python-48.png" alt="" class="w-6" />
+            </small>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+  <script src="../js/tagcloud.js"></script>
 </Base>
 
 <style is:global>
