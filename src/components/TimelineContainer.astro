@@ -1,0 +1,42 @@
+---
+import "../css/timeline.css";
+
+interface Props {
+  orientation: string;
+  img: string;
+  title: string;
+  date: string;
+}
+
+const { orientation, img, title, date } = Astro.props;
+---
+
+{
+  () => {
+    if (orientation === "left") {
+      return (
+        <div class="timeline-container left-container">
+          <img src={img} alt={img} />
+          <div class="text-box">
+            <h2>{title}</h2>
+            <small>{date}</small>
+            <slot />
+            <span class="left-container-arrow" />
+          </div>
+        </div>
+      );
+    } else if (orientation === "right") {
+      return (
+        <div class="timeline-container right-container">
+          <img src={img} alt={img} />
+          <div class="text-box">
+            <h2>{title}</h2>
+            <small>{date}</small>
+            <slot />
+            <span class="right-container-arrow" />
+          </div>
+        </div>
+      );
+    }
+  }
+}

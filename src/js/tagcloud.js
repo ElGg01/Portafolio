@@ -3,17 +3,16 @@ import TagCloud from "TagCloud";
 const container = '.tagcloud';
 const texts = [
     'Python', 'HTML', 'JavaScript',
-    'CSS', '3D', 'Flutter',
-    'Edición', 'C#', 'Unity',
-    'SQL', 'Linux',
+    'CSS', 'Blender', 'Flutter',
+    'Vegas Pro', 'C#', 'Unity',
+    'SQL', 'Linux', 'Photoshop'
 ];
 const options = {
-    radius: 180,
+    radius: 160,
     maxSpeed: 'fast',
     initSpeed: 'fast',
     direction: 135,
     keep: true
-
 };
 
 TagCloud(container, texts, options);

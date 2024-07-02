@@ -2,14 +2,15 @@
 // Supports weights 100-900
 import "@fontsource-variable/onest";
 import Navbar from "../layouts/Navbar.astro";
+import Footer from "../layouts/Footer.astro";
 import Base from "../layouts/BaseLayout.astro";
+import Card from "../components/Card.astro";
+import TimelineContainer from "../components/TimelineContainer.astro";
 import "animate.css";
 import "../css/flaticons.css";
-import "../css/timeline.css";
-import "../css/card.css";
 ---
 
-<Base titulo="Mi portafolio">
+<Base titulo="Julio - Programador">
   <Navbar />
   <!-- FONDO -->
   <div
@@ -20,11 +21,11 @@ import "../css/card.css";
   <div class="p-5 mt-36">
     <div class="m-auto">
       <h1
-        class="text-4xl text-center mb-6 animate__animated animate__fadeInDown"
+        class="text-4xl text-center mb-6 animate__animated opacity-0 fadeInDown"
       >
         Hola, mi nombre es <span class="font-bold">Julio</span>.
       </h1>
-      <div class="text-center animate__animated animate__fadeInUp">
+      <div class="text-center animate__animated opacity-0 fadeInUp">
         <span
           class="relative inline-block overflow-hidden rounded-full p-[1px]"
         >
@@ -38,15 +39,16 @@ import "../css/card.css";
           </div>
         </span>
       </div>
-      <div class="animate__animated animate__jackInTheBox">
+      <div class="animate__animated opacity-0 jackInTheBox">
         <img
-          src="NewLogo.png"
+          src="NewLogo.webp"
           alt="My Logo"
           class="rounded-full w-1/6 min-w-28 max-w-40 block mx-auto my-4"
         />
       </div>
       <div
-        class="bg-white bg-opacity-10 backdrop-blur-md shadow-md rounded-lg mx-auto mt-4 p-4 w-full animate__animated animate__fadeInUp max-w-4xl"
+        id="about"
+        class="bg-white bg-opacity-10 backdrop-blur-md shadow-md rounded-lg mx-auto mt-4 p-4 w-full animate__animated opacity-0 fadeInUp max-w-4xl"
       >
         <h2 class="font-bold">SOBRE MI:</h2>
         <p class="text-gray-400">
@@ -58,113 +60,70 @@ import "../css/card.css";
         <p class="text-gray-400">Ingeniero en computación - UNAM</p>
       </div>
       <div class="my-4 text-center">
-        <h2 class="animate__animated animate__fadeInUp text-xl mt-12 font-bold">
+        <h2
+          class="animate__animated opacity-0 fadeInUp text-xl mt-12 font-bold"
+        >
           Mi stack de tecnología:
         </h2>
-        <div class="flex justify-center">
+        <div class="flex justify-center animate__animated opacity-0 fadeInUp">
           <div class="tagcloud"></div>
         </div>
       </div>
       <div id="experience" class="my-4 text-center">
-        <h2 class="animate__animated animate__fadeInUp text-xl mt-12 font-bold">
+        <h2
+          class="animate__animated opacity-0 fadeInUp text-xl mt-12 font-bold"
+        >
           Mi experiencia:
         </h2>
         <div class="timeline">
-          <div class="timeline-container right-container">
-            <img src="NewLogo.png" alt="" />
-            <div class="text-box">
-              <h2>CONAHCYT</h2>
-              <small>2023 - 2024</small>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero
-                necessitatibus dolorum asperiores distinctio ipsum, saepe
-                similique amet quae recusandae accusantium. Quo iusto at eveniet
-                autem voluptatum fugit provident quae dolore?
-              </p>
-              <span class="right-container-arrow"></span>
-            </div>
-          </div>
-          <div class="timeline-container left-container">
-            <img src="NewLogo.png" alt="" />
-            <div class="text-box">
-              <h2>UNIDAD DE PLANEACIÓN - UNAM</h2>
-              <small>2023 - 2023</small>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero
-                necessitatibus dolorum asperiores distinctio ipsum, saepe
-                similique amet quae recusandae accusantium. Quo iusto at eveniet
-                autem voluptatum fugit provident quae dolore?
-              </p>
-              <span class="left-container-arrow"></span>
-            </div>
-          </div>
-          <div class="timeline-container right-container">
-            <img src="NewLogo.png" alt="" />
-            <div class="text-box">
-              <h2>Tesla Inc.</h2>
-              <small>2017 - 2019</small>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero
-                necessitatibus dolorum asperiores distinctio ipsum, saepe
-                similique amet quae recusandae accusantium. Quo iusto at eveniet
-                autem voluptatum fugit provident quae dolore?
-              </p>
-              <span class="right-container-arrow"></span>
-            </div>
-          </div>
+          <TimelineContainer
+            orientation="left"
+            title="CONAHCYT"
+            date="2023 - 2024"
+            img="logo-conahcyt.jpg"
+          >
+            <p>
+              Desarrollo software para automatizar generación de reportes,
+              automatización de correos, asignación de evaluadores en base a
+              probabilidad, ofimática, etc.
+            </p>
+          </TimelineContainer>
+          <TimelineContainer
+            orientation="right"
+            title="UNIDAD DE PLANEACIÓN - UNAM"
+            date="2023 - 2023"
+            img="LOGO UNIDAD DE PLANEACION CIRCULO.jpg"
+          >
+            <p>
+              Desarrollo software para automatizar generación de reportes,
+              automatización de correos, asignación de evaluadores en base a
+              probabilidad, ofimática, etc.
+            </p>
+          </TimelineContainer>
         </div>
       </div>
       <div id="projects" class="my-4 text-center">
-        <h2 class="animate__animated animate__fadeInUp text-xl mt-12 font-bold">
+        <h2
+          class="animate__animated opacity-0 fadeInUp text-xl mt-12 font-bold"
+        >
           Mis proyectos:
         </h2>
         <div class="flex justify-center flex-wrap my-8 max-w-7xl m-auto">
-          <div class="card animate__animated animate__fadeIn animate__delay-2s">
-            <div class="relative">
-              <div
-                class="absolute top-1/2 right-0 left-0 text-red-600 font-bold text-card"
-              >
-                <p>IR AL PROYECTO</p>
-              </div>
-              <div class="card-img-container">
-                <img src="NewLogo.png" alt="" class="w-full" />
-              </div>
-            </div>
-            <div>
-              <h3 class="font-bold my-4">EconoMÍA</h3>
-              <p>App móvil para gestionar tus finanzas.</p>
-            </div>
-            <small
-              class="absolute right-0 left-0 bottom-0 bg-black/50 rounded-b-lg h-8 flex justify-items-center justify-center items-center text-lg"
-              ><img src="icons8-dart-48.png" alt="" class="w-6" />
-              <img src="icons8-firebase-48.png" alt="" class="w-6" />
-            </small>
-          </div>
-          <div class="card animate__animated animate__fadeIn animate__delay-2s">
-            <div class="relative">
-              <div
-                class="absolute top-1/2 right-0 left-0 text-red-600 font-bold text-card"
-              >
-                <p>IR AL PROYECTO</p>
-              </div>
-              <div class="card-img-container">
-                <img src="NewLogo.png" alt="" class="w-full" />
-              </div>
-            </div>
-            <div>
-              <h3 class="font-bold my-4">Felicitame</h3>
-              <p>Una web para que nunca más olvides un cumpleaños.</p>
-            </div>
-            <small
-              class="absolute right-0 left-0 bottom-0 bg-black/50 rounded-b-lg h-8 flex justify-items-center justify-center items-center text-lg"
-              ><img src="icons8-python-48.png" alt="" class="w-6" />
-            </small>
-          </div>
+          <Card
+            title="Economía"
+            description="App móvil para gestionar tus finanzas."
+            img="logoAppGastos.jpeg"
+            icons={["icons8-dart-48.png", "icons8-firebase-48.png"]}
+            link="https://github.com/ElGg01/econo_mia"
+          />
         </div>
       </div>
     </div>
   </div>
+  <!-- FOOTER -->
+  <Footer />
   <script src="../js/tagcloud.js"></script>
+  <script src="../js/observer.js"></script>
 </Base>
 
 <style is:global>
