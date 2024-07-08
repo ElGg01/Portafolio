@@ -1,9 +1,10 @@
 ---
 export interface Props {
   titulo: string;
+  icon: string;
 }
 
-const { titulo } = Astro.props as Props;
+const { titulo, icon } = Astro.props as Props;
 ---
 
 <!doctype html>
@@ -11,6 +12,7 @@ const { titulo } = Astro.props as Props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href={icon} type="image/x-icon" />
     <title>{titulo}</title>
     <style>
       html {

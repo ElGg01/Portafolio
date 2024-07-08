@@ -1,5 +1,6 @@
 ---
 import "../css/card.css";
+import { Image } from "astro:assets";
 
 interface Props {
   img: string;
@@ -18,7 +19,14 @@ const { img, title, description, icons, link } = Astro.props;
 >
   <div class="relative">
     <div class="card-img-container">
-      <img src={img} alt={img} class="w-full" />
+      <!-- <img src={img} alt={img} class="w-full" /> -->
+      <Image
+        src={"/" + img}
+        alt={img}
+        class="w-full"
+        width={100}
+        height={100}
+      />
     </div>
   </div>
   <div>
@@ -30,7 +38,16 @@ const { img, title, description, icons, link } = Astro.props;
   >
     {
       icons.map((icon) => {
-        return <img src={icon} alt={icon} class="w-6" />;
+        // return <img src={icon} alt={icon} class="w-6" />;
+        return (
+          <Image
+            src={"/" + icon}
+            alt={icon}
+            class="w-6"
+            width={100}
+            height={100}
+          />
+        );
       })
     }
   </small>

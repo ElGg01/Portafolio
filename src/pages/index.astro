@@ -10,7 +10,7 @@ import "animate.css";
 import "../css/flaticons.css";
 ---
 
-<Base titulo="Julio - Programador">
+<Base titulo="Julio - Programador" icon="NewLogo.webp">
   <Navbar />
   <!-- FONDO -->
   <div
@@ -26,18 +26,20 @@ import "../css/flaticons.css";
         Hola, mi nombre es <span class="font-bold">Julio</span>.
       </h1>
       <div class="text-center animate__animated opacity-0 fadeInUp">
-        <span
-          class="relative inline-block overflow-hidden rounded-full p-[1px]"
-        >
+        <a href="Profile.pdf" download>
           <span
-            class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
-          ></span>
-          <div
-            class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gray-950 px-3 py-1 text-xs font-medium text-gray-50 backdrop-blur-3xl"
+            class="relative inline-block overflow-hidden rounded-full p-[1px]"
           >
-            Disponible para trabajar
-          </div>
-        </span>
+            <span
+              class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
+            ></span>
+            <div
+              class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-gray-950 px-3 py-1 text-xs font-medium text-gray-50 backdrop-blur-3xl"
+            >
+              Disponible para trabajar (CV)
+            </div>
+          </span>
+        </a>
       </div>
       <div class="animate__animated opacity-0 jackInTheBox">
         <img
@@ -48,11 +50,16 @@ import "../css/flaticons.css";
       </div>
       <div
         id="about"
-        class="bg-white bg-opacity-10 backdrop-blur-md shadow-md rounded-lg mx-auto mt-4 p-4 w-full animate__animated opacity-0 fadeInUp max-w-4xl"
+        class="bg-white bg-opacity-10 backdrop-blur-md shadow-md rounded-lg mx-auto mt-4 p-4 w-full animate__animated opacity-0 fadeInUp max-w-4xl py-4"
       >
         <h2 class="font-bold">SOBRE MI:</h2>
         <p class="text-gray-400">
-          Soy ingeniero en computación en busqueda de mi primer empleo.
+          Soy un estudiante / profesional comprometido que siempre busca dar lo
+          mejor de sí mismo y nunca se rinde. Apasionado por la tecnología y el
+          progreso de la humanidad, estoy dedicado a contribuir
+          significativamente en estos campos. Actualmente explorando nuevas
+          oportunidades para aplicar mis habilidades en un entorno dinámico y
+          colaborativo.
         </p>
         <h2 class="font-bold mt-4">CORREO ELECTRONICO:</h2>
         <p class="text-gray-400">jcng.aa135@gmail.com</p>
@@ -69,7 +76,7 @@ import "../css/flaticons.css";
           <div class="tagcloud"></div>
         </div>
       </div>
-      <div id="experience" class="my-4 text-center">
+      <div id="experience" class="my-4 text-center py-4">
         <h2
           class="animate__animated opacity-0 fadeInUp text-xl mt-12 font-bold"
         >
@@ -102,7 +109,7 @@ import "../css/flaticons.css";
           </TimelineContainer>
         </div>
       </div>
-      <div id="projects" class="my-4 text-center">
+      <div id="projects" class="my-4 text-center py-4">
         <h2
           class="animate__animated opacity-0 fadeInUp text-xl mt-12 font-bold"
         >
@@ -112,9 +119,23 @@ import "../css/flaticons.css";
           <Card
             title="Economía"
             description="App móvil para gestionar tus finanzas."
-            img="logoAppGastos.jpeg"
+            img="logoAppGastos.webp"
             icons={["icons8-dart-48.png", "icons8-firebase-48.png"]}
             link="https://github.com/ElGg01/econo_mia"
+          />
+          <Card
+            title="Super Explorer"
+            description="Programa de escritorio para organizar tus archivos."
+            img="LogoSuperExplorer.webp"
+            icons={["icons8-python-48.png"]}
+            link="https://github.com/ElGg01/SuperExplorer"
+          />
+          <Card
+            title="Facebook Clone Android"
+            description="Clon del inicio de sesión de Facebook"
+            img="FacebookCloneLogo.webp"
+            icons={["icons8-kotlin-48.png"]}
+            link="https://github.com/ElGg01/FacebookCloneAndroid"
           />
         </div>
       </div>
@@ -124,6 +145,7 @@ import "../css/flaticons.css";
   <Footer />
   <script src="../js/tagcloud.js"></script>
   <script src="../js/observer.js"></script>
+  <script src="../js/navbar.js"></script>
 </Base>
 
 <style is:global>

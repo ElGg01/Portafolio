@@ -1,0 +1,8 @@
+.hide {
+    transition: all 1s ease-in-out;
+    top: 90vh;
+}
+
+.hide-social-media {
+    display: none;
+}
