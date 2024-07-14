@@ -1,0 +1,53 @@
+.form-group label {
+    display: block;
+    text-align: start;
+    margin-bottom: 0.1rem;
+}
+
+.form-group {
+    margin: 0.5rem 0;
+}
+
+input {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
+
+input:focus {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+}
+
+textarea {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 100%;
+    resize: none;
+    border: none;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    height: 200px;
+}
+
+textarea:focus {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+}
+
+#btn-send-email {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+#btn-send-email:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}

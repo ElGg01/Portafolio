@@ -8,6 +8,7 @@ import Card from "../components/Card.astro";
 import TimelineContainer from "../components/TimelineContainer.astro";
 import "animate.css";
 import "../css/flaticons.css";
+import "../css/form.css";
 ---
 
 <Base titulo="Julio - Programador" icon="NewLogo.webp">
@@ -59,8 +60,6 @@ import "../css/flaticons.css";
           campos. Actualmente explorando nuevas oportunidades para aplicar mis
           habilidades en un entorno dinámico y colaborativo.
         </p>
-        <h2 class="font-bold mt-4">CORREO ELECTRÓNICO:</h2>
-        <p class="text-gray-400">jcng.aa135@gmail.com</p>
         <h2 class="font-bold mt-4">TÍTULO:</h2>
         <p class="text-gray-400">Ingeniero en Computación - UNAM</p>
       </div>
@@ -140,6 +139,69 @@ import "../css/flaticons.css";
           />
         </div>
       </div>
+      <div
+        id="contact"
+        class="my-4 text-center py-4 animate__animated opacity-0 fadeInUp"
+      >
+        <h2
+          class="animate__animated opacity-0 fadeInUp text-xl mt-12 font-bold mb-4"
+        >
+          Contáctame:
+        </h2>
+        <div class="flex justify-center flex-wrap-reverse gap-6 m-3">
+          <div class="flex flex-col justify-center items-center">
+            <div id="parent3D" class="h-64 relative">
+              <canvas id="model3D"></canvas>
+              <p class="text-sm absolute bottom-4 right-0 left-0 opacity-50">
+                Modelo por: <strong
+                  ><a
+                    href="https://sketchfab.com/3d-models/catoon-coffe-e872b8ff61644e699492bd13140e5571"
+                    >mister_monopoly</a
+                  ></strong
+                >
+              </p>
+            </div>
+            <div>
+              <p>
+                Dóname: <strong
+                  ><a
+                    href="https://paypal.me/ElGgMX?country.x=MX&locale.x=es_XC"
+                    >PayPal</a
+                  ></strong
+                >
+              </p>
+            </div>
+          </div>
+          <section>
+            <form
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              class="flex flex-col"
+            >
+              <input
+                type="hidden"
+                name="access_key"
+                value="57373691-35d2-4deb-b98a-b723155c9f50"
+              />
+              <div class="form-group">
+                <label for="">Tu Nombre:</label>
+                <input type="text" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="">Tu Correo:</label>
+                <input type="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="">Mensaje:</label>
+                <textarea name="message" maxlength="500" required></textarea>
+              </div>
+              <div class="form-group">
+                <input type="submit" value="Enviar" id="btn-send-email" />
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
     </div>
   </div>
   <!-- FOOTER -->
@@ -147,6 +209,7 @@ import "../css/flaticons.css";
   <script src="../js/tagcloud.js"></script>
   <script src="../js/observer.js"></script>
   <script src="../js/navbar.js"></script>
+  <script src="../js/models.js"></script>
 </Base>
 
 <style is:global>

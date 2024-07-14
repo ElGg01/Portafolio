@@ -1,7 +1,7 @@
 function checkVisivility(entries){
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            console.log('Esta insersectando');
+            //console.log('Esta insersectando');
             if (entry.target.classList.contains('fadeInDown')) {
                 entry.target.classList.add('animate__fadeInDown');
             }
