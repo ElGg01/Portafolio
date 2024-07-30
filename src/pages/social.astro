@@ -1,0 +1,101 @@
+---
+import Base from "../layouts/BaseLayout.astro";
+import "../css/social.css";
+---
+
+<Base titulo="ElGg" icon="NewLogo.webp">
+  <!-- FONDO -->
+  <div class="fixed -z-10 h-full w-full bg-slate-950">
+    <div
+      class="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"
+    >
+    </div>
+    <div
+      class="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]"
+    >
+    </div>
+  </div>
+
+  <main>
+    <section id="presentation" class="relative">
+      <div class="big-title">
+        <div id="text-behind">Hola,<br />soy ElGg</div>
+        <div id="text-behind-blur">Hola,<br />soy ElGg</div>
+        <div id="text-front">Hola,<br />soy ElGg</div>
+      </div>
+      <div class="canvas-container">
+        <canvas id="model-behind"></canvas>
+      </div>
+    </section>
+    <section class="py-16">
+      <div class="flex justify-center flex-col p-4">
+        <h2 class="text-4xl font-bold text-center py-4">¿Quién soy? 🔎</h2>
+        <div class="w-3/4 m-auto">
+          <p class="p-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quam
+            illo inventore quisquam maxime quaerat doloremque nisi, ad esse
+            animi debitis eos voluptates voluptate est nobis labore soluta
+            corrupti veniam. Rem accusantium quos reprehenderit. Eum voluptatum
+            vel corrupti. Molestias impedit quibusdam quam unde ex, reiciendis
+            error fuga cum aut quod consequatur odit ab quos voluptate ad
+            perferendis alias expedita dolorem.
+          </p>
+        </div>
+      </div>
+      <div class="flex justify-center flex-col p-4">
+        <h2 class="text-4xl font-bold text-center py-4">
+          Mis redes sociales: 💻
+        </h2>
+        <div class="w-1/2 m-auto flex flex-col items-center gap-4">
+          <a
+            href="https://steamcommunity.com/profiles/76561198830101857/"
+            class="w-full transition-all hover:scale-110"
+            ><div
+              class="bg-blue-800/25 w-full h-16 flex justify-center items-center relative overflow-hidden"
+            >
+              <p class="font-bold">Steam</p>
+              <div class="absolute w-full opacity-20">
+                <img src="Steam_logo.png" alt="Steam" class="-z-10 w-full" />
+              </div>
+            </div></a
+          >
+          <a
+            href="https://discord.com/users/elgg"
+            class="w-full transition-all hover:scale-110"
+            ><div
+              class="bg-blue-600/25 w-full h-16 flex justify-center items-center relative overflow-hidden"
+            >
+              <p class="font-bold">Discord</p>
+              <div class="absolute w-full opacity-20">
+                <img src="discord_logo.png" alt="Steam" class="-z-10 w-full" />
+              </div>
+            </div></a
+          >
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- <div class="p-8">
+    <div class="headline-container">
+      <div id="text-behind">HOLA<br />SOY ELGG</div>
+      <div id="text-behind-blur">HOLA<br />SOY ELGG</div>
+      <div id="text-front">HOLA<br />SOY ELGG</div>
+    </div>
+    <div class="canvas-container">
+      <canvas id="canvas"></canvas>
+    </div>
+    <div class="more-content">
+      <h1>HOLA</h1>
+    </div>
+  </div> -->
+  <script src="../js/social.js"></script>
+</Base>
+
+<style is:global>
+  html {
+    font-family: "Onest Variable", sans-serif;
+  }
+  body {
+    color: white;
+  }
+</style>
