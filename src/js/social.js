@@ -98,7 +98,7 @@ const material1 = new THREE.MeshStandardMaterial({
 const objloader = new OBJLoader();
 
 objloader.load(
-    'models/hook_dbd_low.obj',
+    '../models/hook_dbd_low.obj',
  (object) => {
         object.children[0].material = material1;
         object.scale.setScalar( 0.004 );

@@ -3,7 +3,7 @@ import Base from "../layouts/BaseLayout.astro";
 import "../css/social.css";
 ---
 
-<Base titulo="ElGg" icon="NewLogo.webp">
+<Base titulo="ElGg" icon="../NewLogo.webp">
   <!-- FONDO -->
   <div class="fixed -z-10 h-full w-full bg-slate-950">
     <div
@@ -55,7 +55,7 @@ import "../css/social.css";
             >
               <p class="font-bold">Steam</p>
               <div class="absolute w-full opacity-20">
-                <img src="Steam_logo.png" alt="Steam" class="-z-10 w-full" />
+                <img src="../Steam_logo.png" alt="Steam" class="-z-10 w-full" />
               </div>
             </div></a
           >
@@ -67,7 +67,11 @@ import "../css/social.css";
             >
               <p class="font-bold">Discord</p>
               <div class="absolute w-full opacity-20">
-                <img src="discord_logo.png" alt="Steam" class="-z-10 w-full" />
+                <img
+                  src="../discord_logo.png"
+                  alt="Steam"
+                  class="-z-10 w-full"
+                />
               </div>
             </div></a
           >
